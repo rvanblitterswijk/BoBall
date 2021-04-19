@@ -60,6 +60,7 @@ public class Beacon : MonoBehaviour
 
     private void ReloadScene()
     {
+        FindObjectOfType<UIBrain>().ResetCoinCountToSceneStart();
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
