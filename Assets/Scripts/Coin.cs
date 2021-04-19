@@ -15,6 +15,7 @@ public class Coin : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBall"))
         {
             Instantiate(pickUpPS, transform.position, Quaternion.identity);
+            FindObjectOfType<UIBrain>().CoinPickedUp();
             Destroy(gameObject);
         }
     }
