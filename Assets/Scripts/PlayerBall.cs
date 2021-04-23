@@ -23,6 +23,14 @@ public class PlayerBall : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Spike"))
+        {
+            Die();
+        }
+    }
+
     public void Die()
     {
         Instantiate(deathPS, transform.position, Quaternion.identity);
