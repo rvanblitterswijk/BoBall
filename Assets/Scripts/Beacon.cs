@@ -20,7 +20,7 @@ public class Beacon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ReloadScene();
+            FindObjectOfType<PlayerBall>().Die();
         }
     }
 
@@ -32,6 +32,25 @@ public class Beacon : MonoBehaviour
             rb.isKinematic = true;
             StartCoroutine(FloatBall(other.gameObject));
         }
+    }
+
+    public void PlayerDied(float deathTime)
+    {
+        StartCoroutine(DeathTimer(deathTime));
+    }
+
+    public IEnumerator DeathTimer(float deathTime)
+    {
+        var timer = 0f;
+        while (timer < deathTime)
+        {
+            Debug.Log(timer);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        ReloadScene();
+        yield break;
     }
 
     private IEnumerator FloatBall(GameObject playerBall)
