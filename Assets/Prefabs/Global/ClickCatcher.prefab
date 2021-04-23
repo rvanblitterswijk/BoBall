@@ -61,5 +61,5 @@ MonoBehaviour:
   playerBall: {fileID: 0}
   rippleSystem: {fileID: 8512688189662207093, guid: d3ac3a31a72f3f14dbb0e457fa766fe7, type: 3}
   clickTimerUI: {fileID: 0}
-  pushPower: 10
+  pushPower: 17.5
   pushCooldown: 1.5
