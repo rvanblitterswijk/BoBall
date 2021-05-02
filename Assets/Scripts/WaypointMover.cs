@@ -23,12 +23,12 @@ public class WaypointMover : MonoBehaviour
     {
         if (target != null)
         {
+            MoveTowardTarget();
+
             if (Vector3.Distance(transform.position, target.position) <= 0.01f)
             {
                 StartCoroutine(TargetReached());
             }
-
-            MoveTowardTarget();
         }
 
     }
