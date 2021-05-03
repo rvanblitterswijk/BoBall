@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2944881923033641752}
   - component: {fileID: 2944881923033641753}
   - component: {fileID: 2944881923033641749}
+  - component: {fileID: 7433530669335810262}
   m_Layer: 7
   m_Name: PlayerBall
   m_TagString: Untagged
@@ -112,3 +113,17 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 56
   m_CollisionDetection: 1
+--- !u!114 &7433530669335810262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2944881923033641754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f97ec307ae4ca448802d7f15ecbdca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathPS: {fileID: 13130940397985524, guid: 66bef1fceec85f546b31f5ded00b2d04, type: 3}
+  deathTime: 2
