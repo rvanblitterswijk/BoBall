@@ -34,6 +34,7 @@ public class PlayerBall : MonoBehaviour
     public void Die()
     {
         Instantiate(deathPS, transform.position, Quaternion.identity);
+        FindObjectOfType<PlayerBallMovementEmission>().StopEmitting();
         FindObjectOfType<Beacon>().PlayerDied(deathTime);
         Destroy(gameObject);
     }
