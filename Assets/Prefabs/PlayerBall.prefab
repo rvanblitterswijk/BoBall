@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathPS: {fileID: 13130940397985524, guid: 66bef1fceec85f546b31f5ded00b2d04, type: 3}
-  deathTime: 2
+  deathTime: 1.25
+  checkpointSave: {fileID: 11400000, guid: 938d9a3f2d87b4342bc579c7cb148cac, type: 2}

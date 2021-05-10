@@ -8,6 +8,7 @@ public class Beacon : MonoBehaviour
 
     public float floatTime;
     public Transform floatDestination;
+    public CheckpointSave checkpointSave;
 
     private const float EMISSIONMULTIPLIER = 4F;
 
@@ -44,7 +45,6 @@ public class Beacon : MonoBehaviour
         var timer = 0f;
         while (timer < deathTime)
         {
-            Debug.Log(timer);
             timer += Time.deltaTime;
             yield return null;
         }
@@ -74,13 +74,14 @@ public class Beacon : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        checkpointSave.checkpointIsSet = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void ReloadScene()
     {
         FindObjectOfType<UIBrain>().ResetCoinCountToSceneStart();
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void IncreasePSEmission()
